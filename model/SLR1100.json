@@ -1,55 +1,56 @@
 {
 	"schema":"https://xxx.com/schema.json",
 	"UUID":"",
-	"ProductName":"",
-	"ProductKey":"",
-	"DeviceName":"",
-	"DeviceKey":"",
-	"Enabled":true,
-	"Status":"",
-	"Model":"",
-	"SerialNumber":"",
-	"BootloaderVersion":"",
-	"HardwareVersion":"",
-	"FirmwareData":"",
-	"FirmwareVersion":"",
-	"SupportedFrequencyBand":[1,2,3,4],
-	"CurrentFrequencyBand":1,
-	"CommunicationInterface":1,
-	"BaudRate":115200,
-	"OperationTemperature":60,
-	"SupportedTagProtocol":"EPC C1G2",
-	"CurrentTagProtocol":"EPC C1G2",
-	"PowerMode":"",
-	"UserMode":"",
-	"TXPower":{
-		"ReadMaxTXPower":"",
-		"ReadMinTXPower":"",
-		"WriteMaxTXPower":"",
-		"WriteMinTXPower":""
+	"Profile":{
+		"ProductName":"",
+		"ProductKey":"",
+		"DeviceName":"",
+		"DeviceKey":"",
+		"Enabled":true
 	},
-	"GPIO":{
-		"GPIO1":{
-			"Input":1,
-			"Output":1
-		},
-		"GPIO2":{
-			"Input":1,
-			"Output":1
+	"DeviceDetail":{
+		"Model":"",
+		"SerialNumber":"",
+		"BootloaderVersion":"",
+		"HardwareVersion":"",
+		"FirmwareData":"",
+		"FirmwareVersion":"",
+		"PowerMode":"",
+		"UserMode":"",
+		"TXPower":{
+			"ReadMaxTXPower":"",
+			"ReadMinTXPower":"",
+			"WriteMaxTXPower":"",
+			"WriteMinTXPower":""
 		}
 	},
-	"ProtocolParameter":[
-		{
-			"ProtocolName":"",
-			"Session":1,
-			"Target":1,
-			"Miller":1,
-			"QValue":1
+	"RunningData":{
+		"Status":1,
+		"OperationTemperature":60
+	},
+	"CommunicationInterface":{
+		"InterfaceID":1,
+		"BaudRate":115200
+	},
+	"Frequency":{
+		"SupportedFrequencyBand":[1,2,3,4],
+		"CurrentFrequencyBand":{
+			"BandID":1,
+			"FrequencyHopping":{
+				"FrequencyPoint":[555,666,777,888],
+				"HoppingTime":300
+			}
 		}
-	],
-	"FrequencyHopping":{
-		"FrequencyPoint":[555,666,777,888],
-		"HoppingTime":300
+	},
+	"TagProtocol":{
+		"SupportedTagProtocol":"EPC C1G2",
+		"CurrentTagProtocol":{
+				"Name":"EPC C1G2",
+				"Session":1,
+				"Target":1,
+				"Miller":1,
+				"QValue":1
+			}
 	},
 	"Antenna":{
 		"Antenna1":{
@@ -92,5 +93,23 @@
 			"WritePower":5,
 			"SettingTime":10
 		}
+	},
+	"GPIO":{
+		"GPIO1":{
+			"Input":1,
+			"Output":1
+		},
+		"GPIO2":{
+			"Input":1,
+			"Output":1
+		}
+	},
+	"AdvancedParameter":{
+		"SameEPCByAntenna":1,
+		"RFTransmissionMode":1,
+		"MaxEPCLength":496,
+		"EnableAntennaCheck":false,
+		"MaxRSSIType":1,
+		"SameEPCByMemory":1
 	}
 }
